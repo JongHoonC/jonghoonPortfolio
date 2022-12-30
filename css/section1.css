@@ -1,9 +1,9 @@
 /* =============헤더=============== */
 .gnb {
-  padding: 40px 50px;
-  box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
+  padding: 40px 50px;
+  box-sizing: border-box;
 }
 
 .gnb > h2 {
