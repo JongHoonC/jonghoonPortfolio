@@ -1,0 +1,33 @@
+/* =============헤더=============== */
+.gnb {
+  padding: 40px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gnb > h2 {
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+.gnb > h2:hover > a {
+  font-size: 26px;
+}
+.gnb > h2 > a {
+  display: block;
+  font-weight: bold;
+  color: #6d5e70;
+  transition: all 0.3s;
+}
+
+/* ==============섹션1============== */
+.section1 {
+  position: relative;
+}
+
+.section1__title h1 {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%);
+}
