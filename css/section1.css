@@ -17,6 +17,7 @@
   display: block;
   font-weight: bold;
   color: #6d5e70;
+  letter-spacing: 3px;
   transition: all 0.3s;
 }
 

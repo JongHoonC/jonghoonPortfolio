@@ -131,6 +131,11 @@ a {
   color: #000;
 }
 
+/* =============스무스============== */
+html {
+  scroll-behavior: smooth;
+}
+
 /*       스크롤바 설정     */
 
 ::-webkit-scrollbar {
