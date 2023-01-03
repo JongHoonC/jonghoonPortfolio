@@ -139,7 +139,8 @@ html {
 /*       스크롤바 설정     */
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {

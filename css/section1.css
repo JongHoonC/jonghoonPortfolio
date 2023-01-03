@@ -2,6 +2,9 @@
 .gnb {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
   padding: 40px 50px;
   box-sizing: border-box;
 }
