@@ -59,6 +59,7 @@
   }
   .gnb > h2:hover {
     font-size: 26px;
+    color: #365bab;
   }
   .section1 {
     position: relative;
