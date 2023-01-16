@@ -1,0 +1,54 @@
+<template>
+  <section class="section2" id="About">
+    <div class="section2__wrap">
+      <article class="intro__imagebox"></article>
+      <div class="my__intro">
+        <div class="intro__name">
+          <h2>백종훈<span>1999.01.26</span></h2>
+        </div>
+        <div class="inner__intro">
+          <article class="intro__history">
+            <div class="history__inner">
+              <h2>HISTORY</h2>
+              <p>2023 학점은행제 학사 학위 취득 예정</p>
+              <p>2022.09.01 ~ 2023.02.14 뷰 프론트엔드 과정 수료</p>
+              <p>2019 전문 대학 졸업</p>
+              <p>2017 네트워크 관리사 취득</p>
+              <p>2017 PC정비사 취득</p>
+              <p>2014 육군참모총장배 로봇 프로그래밍 대회 2등 수상</p>
+            </div>
+          </article>
+          <article class="intro__introduce">
+            <div class="introduce--title">
+              <h2>INTRODUCE</h2>
+            </div>
+            <div class="introduce--subtitle">
+              <h2>
+                부딪혀보고 시도하는 프론트엔드 개발자<br />
+                백종훈 입니다.
+              </h2>
+            </div>
+            <div class="introduce--content">
+              <p>
+                안녕하세요. 실패를 두려워하지 않는 신입 프론트엔드 개발자 <span>백종훈</span> 입니다.<br />
+                낮은 곳에서 높은 곳을 바라보며 프론트엔드에 대한 더 많은 것을 보고 배우면서 <br />
+                꾸준히 성장하는 개발자가 되고 싶습니다.<br />
+                반드시 오류를 해결한다는 마음가짐으로 항상 맡은 일에 대한 책임을 가지고 임하겠습니다.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {};
+    },
+  };
+</script>
+
+<style scoped></style>
