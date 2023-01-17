@@ -74,6 +74,7 @@
     margin-bottom: 50px;
     color: #365bab;
     font-weight: bold;
+    letter-spacing: 10px;
   }
   .my__intro {
     padding-top: 150px;

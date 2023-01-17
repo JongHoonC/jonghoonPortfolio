@@ -12,14 +12,17 @@ body {
 
 h1 {
   font-size: 50px;
+  letter-spacing: 10px;
 }
 
 h2 {
   font-size: 24px;
+  letter-spacing: 6px;
 }
 
 p {
   font-size: 15px;
+  letter-spacing: 1px;
 }
 
 section {
