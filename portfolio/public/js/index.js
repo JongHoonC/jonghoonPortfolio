@@ -56,7 +56,6 @@ $(function () {
 
   $(window).scroll(function () {
     let skillTop = $('#Skill').offset().top;
-    console.log(skillTop);
     if ($(window).scrollTop() > skillTop - 400) {
       bar1.animate(0.9);
       bar2.animate(0.9);
@@ -66,4 +65,40 @@ $(function () {
       bar6.animate(0.5);
     }
   });
+  $(window).on('scroll', function () {
+    var pos = $(window).scrollTop();
+    var pos2 = pos + 50;
+    var scrollBottom = pos + $(window).height();
+    console.log(pos2);
+
+    // Link Highlighting
+    if (pos2 > $('#Main').offset().top) {
+      highlightLink('Main');
+      $('.Main').addClass('active');
+    }
+    if (pos2 > $('#About').offset().top) {
+      highlightLink('About');
+      $('.About').addClass('active');
+    }
+    if (pos2 > $('#Skill').offset().top) {
+      highlightLink('Skill');
+      $('.Skill').addClass('active');
+    }
+    if (pos2 > $('#Project').offset().top) {
+      highlightLink('Project');
+      $('.Project').addClass('active');
+    }
+
+    if (pos2 > $('#Contact').offset().top || pos + $(window).height() === $(document).height()) {
+      highlightLink('Contact');
+      $('.Contact').addClass('active');
+    }
+  });
+
+  function highlightLink(anchor) {
+    $('#gnb .active').removeClass('active');
+    $('#gnb')
+      .find('[href="#' + anchor + '"]')
+      .addClass('active');
+  }
 });

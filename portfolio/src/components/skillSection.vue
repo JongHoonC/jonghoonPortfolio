@@ -62,6 +62,7 @@
     font-weight: bold;
     color: #365bab;
     letter-spacing: 10px;
+    font-size: 30px;
   }
 
   .skillContent > div {
@@ -86,5 +87,23 @@
   .skillUnder {
     width: 1550px;
     margin: 0 auto;
+  }
+  @media (max-width: 1600px) {
+    .section3 {
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .skillUpper {
+      width: 100%;
+    }
+    .skillUnder {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1040px) {
+    .section3 {
+      height: auto;
+    }
   }
 </style>

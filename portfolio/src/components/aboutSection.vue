@@ -63,18 +63,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1600px;
+    width: 1500px;
     height: 100vh;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+    transition: all 0.3s;
   }
 
   .img__wrap > h1 {
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     color: #365bab;
     font-weight: bold;
     letter-spacing: 10px;
+    font-size: 30px;
+    transition: all 0.3s;
   }
   .my__intro {
     padding-top: 150px;
@@ -82,13 +85,14 @@
   }
   /* =========이미지 박스 부분 ============= */
   .intro__imagebox {
-    width: 386px;
-    height: 515px;
+    width: 300px;
+    height: 392px;
     border: 1px solid #000;
     /* background-image: url(../assets/portpolioimg.jpg); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    transition: all 0.3s;
   }
 
   /* =========히스토리 부분========== */
@@ -134,6 +138,7 @@
     top: 12px;
     margin-left: 100px;
     box-sizing: border-box;
+    transition: all 0.3s;
   }
   .introduce--title > h2 {
     font-size: 30px;
@@ -156,9 +161,105 @@
     font-weight: bold;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1500px) {
     .section2__wrap {
       width: 100%;
+    }
+    .intro__introduce {
+      position: relative;
+      top: 12px;
+      margin-left: 40px;
+      box-sizing: border-box;
+      padding-bottom: 20px;
+    }
+    .intro__imagebox {
+      width: 265px;
+      height: 345px;
+    }
+    .history__inner > h2 {
+      margin: 20px 0;
+      font-size: 21px;
+    }
+    .intro__name > h2 {
+      font-size: 26px;
+    }
+    .intro__name > h2 > span {
+      margin-left: 30px;
+      font-size: 24px;
+    }
+    .introduce--title > h2 {
+      font-size: 21px;
+    }
+    .introduce--subtitle > h2 {
+      margin: 15px 0;
+      font-size: 21px;
+    }
+  }
+  @media (max-width: 1380px) {
+    .section2__wrap {
+      flex-direction: column;
+    }
+    .img__wrap {
+      width: 100%;
+      padding-top: 130px;
+    }
+    .img__wrap > h1 {
+      margin-bottom: 30px;
+    }
+    .intro__imagebox {
+      margin: 0 auto;
+    }
+    .my__intro {
+      padding-top: 30px;
+    }
+  }
+  @media (max-width: 1200px) {
+    .img__wrap {
+      padding-top: 80px;
+    }
+  }
+  @media (max-width: 1040px) {
+    .inner__intro {
+      flex-direction: column;
+    }
+    .intro__name > h2 {
+      text-align: center;
+    }
+    .section2__wrap {
+      height: auto;
+    }
+    .section2 {
+      height: auto;
+    }
+    .history__inner > h2 {
+      text-align: center;
+    }
+    .history__inner > p {
+      text-align: center;
+    }
+    .intro__introduce {
+      text-align: center;
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 768px) {
+    .history__inner > h2 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .intro__name > h2 {
+      font-size: 24px;
+    }
+    .intro__name > h2 > span {
+      margin-left: 30px;
+      font-size: 20px;
+    }
+    .introduce--title > h2 {
+      font-size: 18px;
+    }
+    .introduce--subtitle > h2 {
+      margin: 15px 0;
+      font-size: 18px;
     }
   }
 </style>

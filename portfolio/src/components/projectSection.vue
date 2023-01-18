@@ -2,7 +2,7 @@
   <section class="section4" id="Project">
     <div class="projectTitle">
       <h1>{{ project[0].pjname }}</h1>
-      <h2>{{ project[0].comment }}</h2>
+      <p>{{ project[0].comment }}</p>
       <div class="projectContent">
         <div v-for="pjlists in pjlist" class="box">
           <div class="img__wrap">
@@ -10,13 +10,12 @@
           </div>
           <h2>{{ pjlists.pjtitle }}</h2>
           <p class="using">{{ pjlists.using }}</p>
-          <p class="comment">{{ pjlists.comment }}</p>
         </div>
       </div>
     </div>
     <div class="projectTitle">
       <h1>{{ project[1].pjname }}</h1>
-      <h2>{{ project[1].comment }}</h2>
+      <p>{{ project[1].comment }}</p>
       <div class="projectContent">
         <div v-for="toyProjects in toyProject" class="box">
           <div class="img__wrap">
@@ -24,13 +23,12 @@
           </div>
           <h2>{{ toyProjects.pjtitle }}</h2>
           <p class="using">{{ toyProjects.using }}</p>
-          <p class="comment">{{ toyProjects.comment }}</p>
         </div>
       </div>
     </div>
     <div class="projectTitle">
       <h1>{{ project[2].pjname }}</h1>
-      <h2>{{ project[2].comment }}</h2>
+      <p>{{ project[2].comment }}</p>
       <div class="projectContent">
         <div v-for="webClones in webClone" class="box">
           <div class="img__wrap">
@@ -38,7 +36,6 @@
           </div>
           <h2>{{ webClones.pjtitle }}</h2>
           <p class="using">{{ webClones.using }}</p>
-          <p class="comment">{{ webClones.comment }}</p>
         </div>
       </div>
     </div>
@@ -55,9 +52,9 @@
           {pjname: 'WEB Clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
         ],
         pjlist: [
-          {img: require('../assets/seomoonThum.png'), pjtitle: '서문시장 야시장', using: 'HTML, CSS, JS, nodeJS, MySQL', comment: '대구 최대의 전통시장인 서문시장 야시장을 리뉴얼 하여 제작한 사이트.'},
-          {img: require('../assets/hyosungThum.png'), pjtitle: '효성 중공업', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL ', comment: '중공업, 건설 회사인 효성 중공업 사이트를 리뉴얼 하여 제작한 사이트.'},
-          {img: require('../assets/takjuThum.png'), pjtitle: '서울 탁주', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL ', comment: '탁주제조업 단체인 서울탁주를 리뉴얼 하여 제작한 사이트.'},
+          {img: require('../assets/seomoonThum.png'), pjtitle: '서문시장 야시장', using: 'HTML, CSS, JS, nodeJS, MySQL'},
+          {img: require('../assets/hyosungThum.png'), pjtitle: '효성 중공업', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL'},
+          {img: require('../assets/takjuThum.png'), pjtitle: '서울 탁주', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL'},
         ],
         toyProject: [
           {img: require('../assets/calcThum.png'), pjtitle: '계산기', using: 'HTML, CSS, JS'},
@@ -77,11 +74,13 @@
 <style scoped>
   .projectTitle > h1 {
     padding-top: 20px;
+    font-size: 30px;
     font-weight: bold;
     color: #365bab;
     box-sizing: border-box;
   }
-  .projectTitle > h2 {
+  .projectTitle > p {
+    margin-top: 10px;
     font-weight: bold;
   }
   .projectTitle {
@@ -91,27 +90,31 @@
     margin: 7px 0;
     font-weight: bold;
   }
-  .comment {
-    letter-spacing: normal;
-  }
   .box {
-    padding: 40px 30px;
-    box-shadow: 0 1px 8px 3px;
+    padding: 5px;
+    box-shadow: 0px 1px 8px 3px #0000002e;
     color: rgba(0, 0, 0, 25%);
     box-sizing: border-box;
     transition: all 0.3s;
   }
   .box:hover {
-    transform: translateY(-10px);
     box-shadow: 0 10px 10px 5px;
+    transform: translateY(-10px);
   }
   .box > h2 {
+    padding-left: 10px;
     font-weight: bold;
     color: #365bab;
     letter-spacing: 4px;
+    box-sizing: border-box;
+  }
+  .box > p {
+    padding-left: 10px;
+    box-sizing: border-box;
   }
   .section4 {
-    width: 1600px;
+    width: 1500px;
+    height: auto;
     margin: 0 auto;
     padding: 20px 0;
     box-sizing: border-box;
@@ -119,7 +122,8 @@
   .projectContent {
     display: flex;
     justify-content: space-between;
-    margin: 40px 0;
+    width: 1420px;
+    margin: 40px auto;
   }
   .img__wrap {
     width: 450px;

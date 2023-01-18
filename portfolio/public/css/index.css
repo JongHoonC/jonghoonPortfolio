@@ -29,3 +29,42 @@ section {
   width: 100%;
   height: 100vh;
 }
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 42px;
+    letter-spacing: 5px;
+  }
+
+  h2 {
+    font-size: 21px;
+    letter-spacing: 3px;
+  }
+
+  p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+* {
+  transition: all 0.2s;
+}
+@media (max-width: 768px) {
+  section {
+    width: 100%;
+    height: auto;
+  }
+  h1 {
+    font-size: 35px;
+    letter-spacing: 5px;
+  }
+
+  h2 {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
