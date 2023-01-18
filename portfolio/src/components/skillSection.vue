@@ -59,10 +59,10 @@
     margin: 0 auto;
   }
   .skillTitle > h1 {
+    font-size: 30px;
     font-weight: bold;
     color: #365bab;
     letter-spacing: 10px;
-    font-size: 30px;
   }
 
   .skillContent > div {
@@ -90,8 +90,8 @@
   }
   @media (max-width: 1600px) {
     .section3 {
-      padding: 0 20px;
       width: 100%;
+      padding: 0 20px;
       box-sizing: border-box;
     }
     .skillUpper {

@@ -73,10 +73,10 @@
 
   .img__wrap > h1 {
     margin-bottom: 90px;
-    color: #365bab;
-    font-weight: bold;
-    letter-spacing: 10px;
     font-size: 30px;
+    font-weight: bold;
+    color: #365bab;
+    letter-spacing: 10px;
     transition: all 0.3s;
   }
   .my__intro {
@@ -169,8 +169,8 @@
       position: relative;
       top: 12px;
       margin-left: 40px;
-      box-sizing: border-box;
       padding-bottom: 20px;
+      box-sizing: border-box;
     }
     .intro__imagebox {
       width: 265px;
@@ -238,8 +238,8 @@
       text-align: center;
     }
     .intro__introduce {
-      text-align: center;
       margin-left: 0px;
+      text-align: center;
     }
   }
   @media (max-width: 768px) {
