@@ -12,6 +12,7 @@
     "core-js": "^3.8.3",
     "lightvue": "^1.5.1",
     "progressbar.js": "^1.1.0",
+    "scrollmagic": "^2.0.8",
     "vue": "^3.2.13",
     "vuejs-progress-bar": "^1.2.8"
   },

@@ -1,7 +1,7 @@
 <template>
   <section class="section3" id="Skill">
     <div class="skillTitle">
-      <h1>Skill</h1>
+      <h4>SKILL</h4>
     </div>
     <div class="skillContent">
       <div class="skillUpper">
@@ -45,6 +45,7 @@
 </script>
 
 <style scoped>
+  /* ===========프로그래스 바============== */
   .line {
     width: 180px;
     height: 8px;
@@ -58,8 +59,7 @@
     width: 1600px;
     margin: 0 auto;
   }
-  .skillTitle > h1 {
-    font-size: 30px;
+  .skillTitle > h4 {
     font-weight: bold;
     color: #365bab;
     letter-spacing: 10px;
@@ -101,9 +101,40 @@
       width: 100%;
     }
   }
-  @media (max-width: 1040px) {
+  @media (max-width: 1200px) {
     .section3 {
+      padding-top: 70px;
       height: auto;
+    }
+
+    .skillContent {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .skillContent > div {
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0;
+    }
+    .skillContent > div > div {
+      width: auto;
+      text-align: center;
+      height: 200px;
+    }
+  }
+  @media (max-width: 768px) {
+    .skillContent {
+      display: flex;
+      flex-direction: column;
+    }
+    .skillContent > div > div {
+      width: auto;
+      text-align: center;
+      height: 180px;
+    }
+    .skillTitle > h4 {
+      text-align: center;
     }
   }
 </style>

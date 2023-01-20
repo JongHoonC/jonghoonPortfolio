@@ -1,14 +1,14 @@
 <template>
   <section class="section5" id="Contact">
     <div class="sectionTitle">
-      <h1>Contact</h1>
+      <h4>CONTACT</h4>
       <h2>
         제 포트폴리오를 봐주셔서 감사합니다.<br />
         최소한의 시간으로 최고의 효율을 뽑는 개발자가 되겠습니다.
       </h2>
     </div>
     <div class="contactBox">
-      <div class="imgWrap">
+      <div class="imgWrap" id>
         <img :src="img" alt="" />
       </div>
       <div class="callMe">
@@ -56,6 +56,7 @@
   .imgWrap {
     width: 230px;
     height: auto;
+    margin: 0 auto;
   }
   .imgWrap > img {
     display: block;
@@ -63,7 +64,7 @@
     height: auto;
   }
 
-  .sectionTitle > h1 {
+  .sectionTitle > h4 {
     color: #365bab;
     font-weight: bold;
   }
@@ -118,5 +119,47 @@
 
   .clickBox > a:nth-child(1) {
     margin-right: 50px;
+  }
+
+  @media (max-width: 1200px) {
+    .imgWrap {
+      width: 200px;
+    }
+    .clickBox > a {
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .section5 {
+      padding: 20px 20px 120px 20px;
+      box-sizing: border-box;
+    }
+  }
+  @media (max-width: 900px) {
+    .contactBox {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .section5 {
+      padding: 40px 20px 40px 20px;
+    }
+    .imgWrap {
+      min-width: 130px;
+    }
+    .clickBox > a:nth-child(1) {
+      margin-right: 20px;
+    }
+    .contactBox {
+      flex-direction: column;
+      margin-top: 0;
+    }
+    .callMe {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .callMe > div > h2 {
+      margin: 5px 0 20px 0;
+    }
   }
 </style>

@@ -1,24 +1,24 @@
 <template>
   <section class="section2" id="About">
     <div class="section2__wrap">
-      <div class="img__wrap">
-        <h1>About</h1>
-        <article class="intro__imagebox"></article>
-      </div>
       <div class="my__intro">
-        <div class="intro__name">
-          <h2>백종훈<span>1999.01.26</span></h2>
-        </div>
         <div class="inner__intro">
+          <div class="img__wrap">
+            <h4>ABOUT</h4>
+            <article class="intro__imagebox"></article>
+          </div>
           <article class="intro__history">
             <div class="history__inner">
-              <h2>HISTORY</h2>
+              <div class="intro__name">
+                <h4>백종훈<span>1999.01.26</span></h4>
+              </div>
+              <h3>HISTORY</h3>
               <P v-for="historylist in history">{{ historylist.year }} {{ historylist.action }}</P>
             </div>
           </article>
           <article class="intro__introduce">
             <div class="introduce--title">
-              <h2>INTRODUCE</h2>
+              <h3>INTRODUCE</h3>
             </div>
             <div class="introduce--subtitle">
               <h2>
@@ -29,9 +29,7 @@
             <div class="introduce--content">
               <p>
                 안녕하세요. 실패를 두려워하지 않는 신입 프론트엔드 개발자 <span>백종훈</span> 입니다.<br />
-                낮은 곳에서 높은 곳을 바라보며 프론트엔드에 대한 더 많은 것을 보고 배우면서 <br />
-                꾸준히 성장하는 개발자가 되고 싶습니다.<br />
-                반드시 오류를 해결한다는 마음가짐으로 항상 맡은 일에 대한 책임을 가지고 임하겠습니다.
+                더 높은 곳을 바라보며 프론트엔드에 대한 더 많은 것을 보고 배우면서 꾸준히 성장하는 개발자가 되고 싶습니다. 반드시 오류를 해결한다는 마음가짐으로 항상 맡은 일에 대한 책임을 가지고 임하겠습니다.
               </p>
             </div>
           </article>
@@ -48,6 +46,7 @@
         history: [
           {year: '2023', action: '학점은행제 학사 학위 취득 예정'},
           {year: '2022.09.01 ~ 2023.02.14', action: '뷰 프론트엔드 과정 수료'},
+          {year: '2019', action: 'IT보안과 졸업'},
           {year: '2017', action: '네트워크 관리사 취득'},
           {year: '2017', action: 'PC정비사 취득'},
           {year: '2014', action: '육군참모총장배 로봇 프로그래밍 대회 2등 수상'},
@@ -62,54 +61,47 @@
   .section2__wrap {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 1500px;
     height: 100vh;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-    transition: all 0.3s;
   }
 
-  .img__wrap > h1 {
+  .img__wrap > h4 {
     margin-bottom: 90px;
-    font-size: 30px;
     font-weight: bold;
     color: #365bab;
-    letter-spacing: 10px;
-    transition: all 0.3s;
   }
-  .my__intro {
-    padding-top: 150px;
-    box-sizing: border-box;
-  }
+
   /* =========이미지 박스 부분 ============= */
   .intro__imagebox {
     width: 300px;
     height: 392px;
-    border: 1px solid #000;
-    /* background-image: url(../assets/portpolioimg.jpg); */
+    /* border: 1px solid #000; */
+    background-image: url(../assets/portpolioimg.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    transition: all 0.3s;
   }
 
   /* =========히스토리 부분========== */
   .intro__history {
     display: flex;
     flex-direction: column;
+    width: 42%;
+    padding: 160px 0 0 20px;
+    box-sizing: border-box;
   }
 
   /* ==========이름============= */
-  .intro__name > h2 {
-    font-size: 40px;
+
+  .intro__name > h4 {
     font-weight: bold;
-    letter-spacing: 6px;
   }
-  .intro__name > h2 > span {
-    margin-left: 30px;
-    font-size: 30px;
+  .intro__name > h4 > span {
+    margin-left: 10px;
+    font-size: 1.875rem;
   }
 
   /* ============이너 인트로============= */
@@ -117,45 +109,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
   /* ==========이너 히스토리============ */
-  .history__inner > h2 {
-    margin: 40px 0;
-    font-size: 30px;
-    font-weight: bold;
+  .history__inner > h3 {
+    margin: 30px 0 40px 0;
+    font-weight: 500;
     color: #365bab;
-    letter-spacing: 7px;
   }
 
   .history__inner > p {
-    margin: 30px 0;
-    letter-spacing: 1px;
+    margin: 20px 0;
   }
 
   /* =============인트로듀스============ */
   .intro__introduce {
     position: relative;
     top: 12px;
-    margin-left: 100px;
+    width: 60%;
+    padding: 200px 15px 0 15px;
     box-sizing: border-box;
-    transition: all 0.3s;
+    transition: none;
   }
-  .introduce--title > h2 {
-    font-size: 30px;
-    font-weight: bold;
+  .introduce--title > h3 {
+    font-weight: 500;
     color: #365bab;
-    letter-spacing: 7px;
   }
 
   .introduce--subtitle > h2 {
     margin: 20px 0;
     font-weight: bold;
-    letter-spacing: 4px;
   }
 
   .introduce--content > p {
     line-height: 300%;
-    letter-spacing: 1px;
+    word-break: break-all;
   }
   .introduce--content > p > span {
     font-weight: bold;
@@ -165,101 +153,86 @@
     .section2__wrap {
       width: 100%;
     }
-    .intro__introduce {
-      position: relative;
-      top: 12px;
-      margin-left: 40px;
-      padding-bottom: 20px;
+  }
+  @media (max-width: 1440px) {
+    .intro__imagebox[data-v-5b678ea8] {
+      width: 278px;
+      height: 362px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .section2__wrap {
+      height: auto;
+      padding-top: 25px;
       box-sizing: border-box;
     }
-    .intro__imagebox {
-      width: 265px;
-      height: 345px;
+    .my__intro {
+      padding-top: 40px;
+      box-sizing: border-box;
     }
-    .history__inner > h2 {
-      margin: 20px 0;
-      font-size: 21px;
-    }
-    .intro__name > h2 {
-      font-size: 26px;
-    }
-    .intro__name > h2 > span {
-      margin-left: 30px;
-      font-size: 24px;
-    }
-    .introduce--title > h2 {
-      font-size: 21px;
-    }
-    .introduce--subtitle > h2 {
-      margin: 15px 0;
-      font-size: 21px;
-    }
-  }
-  @media (max-width: 1380px) {
-    .section2__wrap {
-      flex-direction: column;
+    .inner__intro {
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
     }
     .img__wrap {
-      width: 100%;
-      padding-top: 130px;
+      width: 40%;
     }
-    .img__wrap > h1 {
-      margin-bottom: 30px;
+    .img__wrap > h4 {
+      margin: 0;
     }
-    .intro__imagebox {
+    .intro__imagebox[data-v-5b678ea8] {
+      width: 249px;
+      height: 315px;
       margin: 0 auto;
     }
-    .my__intro {
-      padding-top: 30px;
+    .intro__history {
+      width: 60%;
+    }
+    .history__inner > h3 {
+      margin: 20px 0;
+    }
+
+    .intro__introduce {
+      width: 87vw;
+      padding: 0;
+      top: 0px;
+    }
+    .intro__history {
+      padding: 50px 0 0 20px;
+      box-sizing: border-box;
     }
   }
-  @media (max-width: 1200px) {
-    .img__wrap {
-      padding-top: 80px;
+
+  @media (max-width: 768px) {
+    .intro__imagebox[data-v-5b678ea8] {
+      width: 219px;
+      height: 278px;
     }
-  }
-  @media (max-width: 1040px) {
     .inner__intro {
       flex-direction: column;
     }
-    .intro__name > h2 {
-      text-align: center;
-    }
-    .section2__wrap {
-      height: auto;
-    }
-    .section2 {
-      height: auto;
-    }
-    .history__inner > h2 {
-      text-align: center;
-    }
-    .history__inner > p {
-      text-align: center;
-    }
     .intro__introduce {
-      margin-left: 0px;
+      width: 100%;
+      padding: 0;
       text-align: center;
     }
-  }
-  @media (max-width: 768px) {
-    .history__inner > h2 {
-      margin: 10px 0;
-      font-size: 18px;
+    .intro__history {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
     }
-    .intro__name > h2 {
-      font-size: 24px;
+    .img__wrap {
+      width: 100%;
+      text-align: center;
     }
-    .intro__name > h2 > span {
-      margin-left: 30px;
-      font-size: 20px;
+    .img__wrap > h3 {
+      margin-bottom: 20px;
+      padding-top: 30px;
     }
-    .introduce--title > h2 {
-      font-size: 18px;
-    }
-    .introduce--subtitle > h2 {
-      margin: 15px 0;
-      font-size: 18px;
+    .img__wrap > h3 {
+      text-align: left;
     }
   }
 </style>

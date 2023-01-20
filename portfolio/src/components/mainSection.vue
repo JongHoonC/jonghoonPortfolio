@@ -1,13 +1,16 @@
 <template>
   <section class="section1" id="Main">
     <div id="gnb">
-      <h2 v-bind:class="`${gnblist}`" @click="goSection" v-for="gnblist in gnb" class="gotosec" v-bind:data-target="gnblist">
+      <h2 v-bind:class="`${gnblist}`" v-for="gnblist in gnb" v-bind:data-target="gnblist">
         <a :href="`#${gnblist}`">{{ gnblist }}</a>
       </h2>
     </div>
-    <div class="section1__img"></div>
     <div class="section1__title">
       <h1>"{{ section1Title }}"</h1>
+    </div>
+    <!-- <div class="spacer s0"></div> -->
+    <div id="animate" class="box1 blue">
+      <div class="section1__img"></div>
     </div>
   </section>
 </template>
@@ -20,17 +23,6 @@
         gnb: ['Main', 'About', 'Skill', 'Project', 'Contact'],
       };
     },
-    // methods: {
-    //   goSection(e) {
-    //     if (!e.target.matches('.gotosec')) return; //gotosec라는 함수를 다른곳에서 썼을 경우 그 아래에 있는 if 문은 작동하지 않는다.
-    //     e.preventDefault(); //새로고침 방지
-    //     const sec = document.getElementById(e.target.dataset.target); //템플리트에서 작성한 data-target을 찾아서 이동하는 함수
-    //     if (sec) {
-    //       sec.scrollIntoView({behavior: 'smooth'}); //화면이 부드럽게 내려가는 효과
-    //       console.log(sec);
-    //     }
-    //   },
-    // },
   };
 </script>
 
@@ -40,6 +32,7 @@
     display: flex;
     justify-content: flex-end;
     position: fixed;
+    align-items: center;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -72,34 +65,29 @@
   }
 
   .section1 {
+    width: 100%;
+    height: 2000px;
     position: relative;
   }
 
-  .section1__title h1 {
+  .section1__title {
     position: absolute;
-    top: 30%;
-    left: 45%;
-    width: 100%;
-    text-align: center;
-    transition: all 0.3s;
-    transform: translate(-50%);
+    top: 15%;
+    left: 20%;
   }
   .section1__img {
-    position: relative;
-    top: 35%;
-    left: 52%;
-    z-index: -1;
-    width: 334px;
-    height: 478px;
+    display: flex;
+    margin: 370px auto;
+    width: 140px;
+    height: 211px;
     background-image: url(../assets/blue.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    transition: all 0.3s;
-    transform: translate(-50%);
     animation-name: rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    transition: all 0.2s;
   }
   @keyframes rotate {
     0% {
@@ -114,48 +102,27 @@
   }
   @media (max-width: 1200px) {
     #gnb {
-      padding: 20px 20px;
-    }
-    #gnb > h2 {
-      margin-left: 20px;
-      font-size: 18px;
+      padding: 20px 50px;
     }
     #gnb > h2.active > a[data-v-a63be1e8] {
-      font-size: 20px;
-      color: #365bab;
-    }
-    .section1__title h1 {
-      font-size: 42px;
-    }
-    .section1__img {
-      width: 240px;
-      height: 340px;
+      font-size: 22px;
     }
   }
   @media (max-width: 768px) {
     #gnb {
+      width: 100%;
       justify-content: space-between;
+      padding: 20px;
+      box-sizing: border-box;
     }
     #gnb > h2 {
-      margin-left: 20px;
-      font-size: 15px;
+      margin-left: 0px;
     }
     #gnb > h2.active > a[data-v-a63be1e8] {
-      font-size: 17px;
-      color: #365bab;
-    }
-    .section1__title h1 {
-      font-size: 35px;
-    }
-    .section1__img {
-      position: absolute;
-      top: 37%;
-      left: 45%;
-      width: 240px;
-      height: 340px;
+      font-size: 20px;
     }
     .section1 {
-      height: 100vh;
+      height: 1800px;
     }
   }
 </style>
