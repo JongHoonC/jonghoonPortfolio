@@ -69,7 +69,6 @@ $(function () {
     var pos = $(window).scrollTop();
     var pos2 = pos + 50;
     var scrollBottom = pos + $(window).height();
-    console.log(pos);
 
     // Link Highlighting
     if (pos2 > $('#Main').offset().top) {

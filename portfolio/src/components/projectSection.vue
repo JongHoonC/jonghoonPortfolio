@@ -1,7 +1,7 @@
 <template>
   <section class="section4" id="Project">
-    <h4>PROJECT</h4>
     <div class="projectTitle">
+      <h4>PROJECT</h4>
       <h3>{{ project[0].pjname }}</h3>
       <p>{{ project[0].comment }}</p>
       <div class="projectContent">
@@ -59,9 +59,9 @@
           {pjname: 'web clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
         ],
         pjlist: [
-          {img: require('../assets/seomoonThum.png'), pjtitle: '서문시장 야시장', using: 'HTML, CSS, JS, nodeJS, MySQL'},
-          {img: require('../assets/hyosungThum.png'), pjtitle: '효성 중공업', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL'},
-          {img: require('../assets/takjuThum.png'), pjtitle: '서울 탁주', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL'},
+          {img: require('../assets/seomoonThum.png'), pjtitle: '서문시장 야시장', using: 'HTML, CSS, JS, nodeJS, MySQL', complete: 'false'},
+          {img: require('../assets/hyosungThum.png'), pjtitle: '효성 중공업', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL', complete: 'false'},
+          {img: require('../assets/takjuThum.png'), pjtitle: '서울 탁주', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL', complete: 'false'},
         ],
         toyProject: [
           {img: require('../assets/calcThum.png'), pjtitle: '계산기', using: 'HTML, CSS, JS'},
@@ -81,13 +81,12 @@
 
 <style scoped>
   .section4 {
-    width: 1500px;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
     padding: 110px 20px 29px 20px;
     box-sizing: border-box;
   }
-  .section4 > h4 {
+  .projectTitle > h4 {
     font-weight: bold;
     color: #365bab;
   }
@@ -100,7 +99,8 @@
     font-weight: bold;
   }
   .projectTitle {
-    margin: 40px 0;
+    width: 1500px;
+    margin: 40px auto;
   }
   .using {
     margin: 7px 0;
@@ -147,8 +147,9 @@
     width: 100%;
     height: auto;
   }
+
   @media (max-width: 1500px) {
-    .section4 {
+    .projectTitle {
       width: 100%;
     }
     .projectContent {
