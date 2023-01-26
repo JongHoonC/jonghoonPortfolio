@@ -62,7 +62,7 @@ $(function () {
       bar3.animate(0.4);
       bar4.animate(0.6);
       bar5.animate(0.6);
-      bar6.animate(0.5);
+      bar6.animate(0.3);
     }
   });
   $(window).on('scroll', function () {
