@@ -46,6 +46,7 @@
 
 <style scoped>
   /* ===========프로그래스 바============== */
+
   .line {
     width: 180px;
     height: 8px;
@@ -103,14 +104,14 @@
   }
   @media (max-width: 1200px) {
     .section3 {
-      padding-top: 70px;
       height: auto;
+      padding-top: 70px;
     }
 
     .skillContent {
-      margin-top: 40px;
       display: flex;
       justify-content: space-between;
+      margin-top: 40px;
     }
     .skillContent > div {
       flex-direction: column;
@@ -119,8 +120,8 @@
     }
     .skillContent > div > div {
       width: auto;
-      text-align: center;
       height: 200px;
+      text-align: center;
     }
   }
   @media (max-width: 768px) {
@@ -130,8 +131,8 @@
     }
     .skillContent > div > div {
       width: auto;
-      text-align: center;
       height: 180px;
+      text-align: center;
     }
     .skillTitle > h4 {
       text-align: center;

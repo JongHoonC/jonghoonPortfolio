@@ -195,9 +195,9 @@
     }
 
     .intro__introduce {
+      top: 0px;
       width: 87vw;
       padding: 0;
-      top: 0px;
     }
     .intro__history {
       padding: 50px 0 0 20px;

@@ -65,20 +65,20 @@
   }
 
   .sectionTitle > h4 {
-    color: #365bab;
     font-weight: bold;
+    color: #365bab;
   }
   .sectionTitle > h2 {
-    font-weight: bold;
     margin: 20px 0;
+    font-weight: bold;
   }
 
   .contactBox {
-    width: 900px;
     display: flex;
     align-items: center;
-    margin: 50px auto 0 auto;
     justify-content: space-evenly;
+    width: 900px;
+    margin: 50px auto 0 auto;
   }
   .callMe {
     text-align: left;
@@ -87,34 +87,34 @@
     margin: 20px 0;
   }
   .callMe > div > p {
-    color: #365bab;
     font-weight: bold;
+    color: #365bab;
   }
   .callMe > div > h2 {
-    font-weight: bold;
     margin: 5px 0 40px 0;
+    font-weight: bold;
   }
   .clickBox {
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
   }
   .clickBox > a {
     display: block;
+    overflow: hidden;
     width: 200px;
     height: 60px;
     border: none;
-    background-color: #365bab;
     border-radius: 999px;
-    line-height: 60px;
-    overflow: hidden;
+    background-color: #365bab;
+    line-height: 63px;
   }
 
   .clickBox > a > h2 {
+    font-weight: bold;
     color: #eaebe4;
     text-align: center;
     letter-spacing: 3px;
-    font-weight: bold;
   }
 
   .clickBox > a:nth-child(1) {
@@ -128,7 +128,7 @@
     .clickBox > a {
       width: 150px;
       height: 40px;
-      line-height: 40px;
+      line-height: 43px;
     }
     .section5 {
       padding: 20px 20px 120px 20px;

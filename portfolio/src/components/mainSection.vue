@@ -6,11 +6,17 @@
       </h2>
     </div>
     <div class="section1__title">
-      <h1>"{{ section1Title }}"</h1>
+      <h1>
+        시도하는 개발자<br />
+        <span> 백종훈</span> 입니다.
+      </h1>
     </div>
     <!-- <div class="spacer s0"></div> -->
     <div id="animate" class="box1 blue">
       <div class="section1__img"></div>
+    </div>
+    <div class="hello" data-aos="fade-up" data-aos-offset="700" data-aos-duration="200">
+      <h1>"반갑습니다"</h1>
     </div>
   </section>
 </template>
@@ -19,7 +25,6 @@
   export default {
     data() {
       return {
-        section1Title: '반갑습니다.',
         gnb: ['Main', 'About', 'Skill', 'Project', 'Contact'],
       };
     },
@@ -30,9 +35,9 @@
   /* =============헤더=============== */
   #gnb {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     position: fixed;
-    align-items: center;
     top: 0;
     right: 0;
     z-index: 9999;
@@ -65,29 +70,42 @@
   }
 
   .section1 {
+    position: relative;
     width: 100%;
     height: 2000px;
-    position: relative;
   }
 
   .section1__title {
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 10%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%);
+  }
+  .section1__title > h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .section1__title > h1 > span {
+    font-weight: bold;
+    color: #365bab;
+  }
+  .section1__title > h1 > br {
+    display: none;
   }
   .section1__img {
     display: flex;
-    margin: 370px auto;
     width: 140px;
     height: 211px;
+    margin: 370px auto;
     background-image: url(../assets/blue.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    transition: all 0.2s;
     animation-name: rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    transition: all 0.2s;
   }
   @keyframes rotate {
     0% {
@@ -100,6 +118,15 @@
       transform: rotate(-3deg);
     }
   }
+
+  .hello {
+    display: block;
+    position: absolute;
+    bottom: 700px;
+    left: 200px;
+  }
+  .hello > h1 {
+  }
   @media (max-width: 1200px) {
     #gnb {
       padding: 20px 50px;
@@ -107,11 +134,18 @@
     #gnb > h2.active > a[data-v-a63be1e8] {
       font-size: 22px;
     }
+    .section1__img {
+      margin: 500px auto;
+    }
+    .hello {
+      bottom: 700px;
+      left: 100px;
+    }
   }
   @media (max-width: 768px) {
     #gnb {
-      width: 100%;
       justify-content: space-between;
+      width: 100%;
       padding: 20px;
       box-sizing: border-box;
     }
@@ -123,6 +157,12 @@
     }
     .section1 {
       height: 1800px;
+    }
+    .section1__title > h1 > br {
+      display: block;
+    }
+    .section1__img {
+      margin: 370px auto;
     }
   }
 </style>

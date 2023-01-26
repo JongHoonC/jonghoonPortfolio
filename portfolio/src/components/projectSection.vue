@@ -11,6 +11,19 @@
           </div>
           <div class="text__wrap">
             <h2>{{ pjlists.pjtitle }}</h2>
+            <div class="fadeup">
+              <div class="img">
+                <a v-bind:href="pjlists.site" target="_blank">
+                  <img :src="pjlists.homeImg" alt="" />
+                </a>
+                <a v-bind:href="pjlists.git" target="_blank">
+                  <img :src="pjlists.gitImg" alt="" />
+                </a>
+                <a href="">
+                  <img :src="pjlists.mokImg" alt="" />
+                </a>
+              </div>
+            </div>
             <p class="using">{{ pjlists.using }}</p>
           </div>
         </div>
@@ -26,6 +39,16 @@
           </div>
           <div class="text__wrap">
             <h2>{{ toyProjects.pjtitle }}</h2>
+            <div class="fadeup">
+              <div class="img">
+                <a v-bind:href="toyProjects.site" target="_blank">
+                  <img :src="toyProjects.homeImg" alt="" />
+                </a>
+                <a v-bind:href="toyProjects.git" target="_blank">
+                  <img :src="toyProjects.gitImg" alt="" />
+                </a>
+              </div>
+            </div>
             <p class="using">{{ toyProjects.using }}</p>
           </div>
         </div>
@@ -41,6 +64,16 @@
           </div>
           <div class="text__wrap">
             <h2>{{ webClones.pjtitle }}</h2>
+            <div class="fadeup">
+              <div class="img">
+                <a v-bind:href="webClones.site" target="_blank">
+                  <img :src="webClones.homeImg" alt="" />
+                </a>
+                <a v-bind:href="webClones.git" target="_blank">
+                  <img :src="webClones.gitImg" alt="" />
+                </a>
+              </div>
+            </div>
             <p class="using">{{ webClones.using }}</p>
           </div>
         </div>
@@ -53,26 +86,113 @@
   export default {
     data() {
       return {
+        hoverImg__ignore: [{img: require('../assets/home.png')}, {img: require('../assets/github.png')}],
         project: [
           {pjname: 'renewal project', comment: 'html 부터 backend 부분까지 작업한 프로젝트'},
           {pjname: 'toy project', comment: '남는 시간을 이용해 JS와 Vue를 활용하여 만든 토이 프로젝트 '},
           {pjname: 'web clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
         ],
         pjlist: [
-          {img: require('../assets/seomoonThum.png'), pjtitle: '서문시장 야시장', using: 'HTML, CSS, JS, nodeJS, MySQL', complete: 'false'},
-          {img: require('../assets/hyosungThum.png'), pjtitle: '효성 중공업', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL', complete: 'false'},
-          {img: require('../assets/takjuThum.png'), pjtitle: '서울 탁주', using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL', complete: 'false'},
+          {
+            img: require('../assets/seomoonThum.png'),
+            pjtitle: '서문시장 야시장',
+            using: 'HTML, CSS, JS, nodeJS, MySQL',
+            complete: 'false',
+            site: 'http://seomoonjh-env.eba-vifj7trn.ap-northeast-1.elasticbeanstalk.com/',
+            git: 'https://github.com/JongHoonC/seomoon.git',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            mokImg: require('../assets/mockup.png'),
+          },
+          {
+            img: require('../assets/hyosungThum.png'),
+            pjtitle: '효성 중공업',
+            using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
+            complete: 'false',
+            site: 'http://jonghoon-env.eba-5pmv5k3e.ap-northeast-1.elasticbeanstalk.com/',
+            git: 'https://github.com/JongHoonC/NODE-Hyosung.git',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            mokImg: require('../assets/mockup.png'),
+          },
+          {
+            img: require('../assets/takjuThum.png'),
+            pjtitle: '서울 탁주',
+            using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
+            complete: 'false',
+            site: 'http://jonghoontakju-env.eba-2hzeja3e.ap-northeast-1.elasticbeanstalk.com/',
+            git: 'https://github.com/JongHoonC/SeoulTakju.git',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            mokImg: require('../assets/mockup.png'),
+          },
         ],
         toyProject: [
-          {img: require('../assets/calcThum.png'), pjtitle: '계산기', using: 'HTML, CSS, JS'},
-          {img: require('../assets/guguThum.png'), pjtitle: '구구단 게임', using: 'HTML, CSS, JS, Vue'},
-          {img: require('../assets/findnumThum.png'), pjtitle: 'UP! DOWN!', using: 'HTML, CSS, JS, Vue'},
-          {img: require('../assets/todolist.png'), pjtitle: '일정표 만들기', using: 'vue'},
+          {
+            img: require('../assets/calcThum.png'),
+            pjtitle: '계산기',
+            using: 'HTML, CSS, JS',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/calculatorJS/index.html',
+            git: 'https://github.com/JongHoonC/dosiraktong.git',
+          },
+          {
+            img: require('../assets/guguThum.png'),
+            pjtitle: '구구단 게임',
+            using: 'HTML, CSS, JS, Vue',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/gugudanGame/gugudan.html',
+            git: 'https://github.com/JongHoonC/dosiraktong.git',
+          },
+          {
+            img: require('../assets/findnumThum.png'),
+            pjtitle: 'UP! DOWN!',
+            using: 'HTML, CSS, JS, Vue',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/updowngame/index.html',
+            git: 'https://github.com/JongHoonC/dosiraktong.git',
+          },
+          {
+            img: require('../assets/todolist.png'),
+            pjtitle: '일정표 만들기',
+            using: 'vue',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/dosiraktong/index.html',
+            git: 'https://github.com/JongHoonC/dosiraktong.git',
+          },
         ],
         webClone: [
-          {img: require('../assets/dosiraktongThum.png'), pjtitle: '도시락통', using: 'HTML, CSS, JS'},
-          {img: require('../assets/gardenThum.png'), pjtitle: '싱그러운 집', using: 'HTML, CSS, JS'},
-          {img: require('../assets/richmondThum.png'), pjtitle: '더 리치먼드 평창', using: 'HTML, CSS, JS'},
+          {
+            img: require('../assets/dosiraktongThum.png'),
+            pjtitle: '도시락통',
+            using: 'HTML, CSS, JS',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/dosiraktong/index.html',
+            git: 'https://github.com/JongHoonC/dosiraktong.git',
+          },
+          {
+            img: require('../assets/gardenThum.png'),
+            pjtitle: '싱그러운 집',
+            using: 'HTML, CSS, JS',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/shouse.garden/index.html',
+            git: 'https://github.com/JongHoonC/shouse.garden.git',
+          },
+          {
+            img: require('../assets/richmondThum.png'),
+            pjtitle: '더 리치먼드 평창',
+            using: 'HTML, CSS, JS',
+            homeImg: require('../assets/home.png'),
+            gitImg: require('../assets/github.png'),
+            site: 'http://bjh0126.dothome.co.kr/therichmond/index.html',
+            git: 'https://github.com/JongHoonC/therichmond.git',
+          },
         ],
       };
     },
@@ -83,7 +203,7 @@
   .section4 {
     width: 100%;
     height: auto;
-    padding: 110px 20px 29px 20px;
+    padding: 70px 20px 29px 20px;
     box-sizing: border-box;
   }
   .projectTitle > h4 {
@@ -91,6 +211,7 @@
     color: #365bab;
   }
   .projectTitle > h3 {
+    margin: 20px 0;
     font-weight: 500;
     color: #365bab;
   }
@@ -100,26 +221,49 @@
   }
   .projectTitle {
     width: 1500px;
-    margin: 40px auto;
+    margin: 80px auto;
   }
   .using {
     margin: 7px 0;
     font-weight: bold;
   }
   .projectTitle > .projectContent > .box {
+    overflow: hidden;
+    width: calc(33.33% - 20px);
     padding: 10px;
     box-shadow: 0px 1px 8px 3px #0000002e;
     color: rgba(0, 0, 0, 25%);
     box-sizing: border-box;
     transition: all 0.3s;
-    width: calc(33.33% - 20px);
   }
   .projectTitle > .projectContent > .box[data-v-4722f99c].calc {
     width: calc(25% - 20px);
   }
+
+  /* /////////////////박스 호버/////////////////// */
   .projectTitle > .projectContent > .box:hover {
     box-shadow: 0 10px 10px 5px;
     transform: translateY(-10px);
+  }
+  .projectTitle > .projectContent > .box:hover > .text__wrap > .using {
+    visibility: hidden;
+  }
+  .projectTitle > .projectContent > .box:hover > .text__wrap > h2 {
+    visibility: hidden;
+  }
+  .projectTitle > .projectContent > .box:hover > .text__wrap > .fadeup {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #eaebe4;
+    animation: fadeInUp 0.3s;
+  }
+  /* /////////////////////////////////////////////// */
+  .text__wrap {
+    transition: all 0.3s;
   }
   .box > .text__wrap > h2 {
     padding-left: 8px;
@@ -137,6 +281,36 @@
     justify-content: space-between;
     margin-top: 20px;
   }
+  .fadeup {
+    /* visibility: hidden; */
+    /* display: flex;*/
+    display: none;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0);
+    }
+  }
+  .img {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .fadeup > .img > a {
+    display: block;
+    width: 32px;
+  }
+  .fadeup > .img > a > img {
+    /* display: block; */
+    width: 100%;
+    height: auto;
+  }
+
   .img__wrap {
     width: 100%;
     height: auto;
@@ -166,21 +340,19 @@
       flex-direction: column;
     }
     .projectTitle > .projectContent > .box {
+      display: flex;
+      align-items: center;
       width: 100%;
       margin: 0 auto;
       margin-bottom: 30px;
-      display: flex;
-      align-items: center;
     }
     .projectTitle > .projectContent > .box[data-v-4722f99c].calc {
       width: 100%;
     }
     .img__wrap {
-      /* width: 200px; */
-      /* min-width: 200px; */
       width: 44%;
-      margin-bottom: 0;
       margin-right: 10px;
+      margin-bottom: 0;
     }
     .projectTitle {
       margin: 20px 0;
@@ -191,6 +363,15 @@
     }
     .text__wrap {
       width: 56%;
+    }
+    .projectTitle > .projectContent > .box:hover > .text__wrap > .fadeup {
+      position: relative;
+      top: 10px;
+      width: 100%;
+      height: auto;
+    }
+    .img {
+      justify-content: space-evenly;
     }
   }
 </style>
