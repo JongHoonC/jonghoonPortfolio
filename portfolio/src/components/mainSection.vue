@@ -40,7 +40,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 9990;
     width: 100%;
     padding: 40px 50px;
     background-color: #eaebe4;

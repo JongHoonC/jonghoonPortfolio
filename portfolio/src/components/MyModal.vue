@@ -1,27 +1,24 @@
 <template>
   <transition name="modal" appear>
     <div class="modal modal-overlay" @click.self="$emit('close')">
-      <div class="modal-window">
+      <div class="modal-window" id="modal-window">
         <div class="modal-content">
           <slot />
         </div>
-        <footer class="modal-footer">
-          <slot name="footer">
-            <button @click="$emit('close')">Close</button>
-          </slot>
-        </footer>
       </div>
     </div>
   </transition>
 </template>
-
+<script>
+  export default {};
+</script>
 <style scoped>
   .modal.modal-overlay {
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 30;
+    z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
@@ -30,17 +27,15 @@
   }
   .modal-window {
     background: #fff;
+    width: 1000px;
+    margin: 0 auto;
     border-radius: 4px;
-    overflow: hidden;
+    overflow-y: scroll;
   }
   .modal-content {
     padding: 10px 20px;
   }
-  .modal-footer {
-    background: #ccc;
-    padding: 10px;
-    text-align: right;
-  }
+
   .modal-enter-active,
   .modal-leave-active {
     transition: opacity 0.4s;

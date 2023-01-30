@@ -1,5 +1,92 @@
 <template>
-  <!-- Button trigger modal -->
+  <!-- <div class="example-modal-window"> -->
+  <MyModal @close="closeModal" v-if="modal">
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+    <p class="show">Vue.js Modal Window!</p>
+  </MyModal>
+  <!-- </div> -->
   <section class="section4" id="Project">
     <div class="projectTitle">
       <h4>PROJECT</h4>
@@ -20,9 +107,9 @@
                 <a v-bind:href="pjlists.git" target="_blank">
                   <img :src="pjlists.gitImg" alt="" />
                 </a>
-                <a href="">
-                  <img :src="pjlists.mokImg" alt="" />
-                </a>
+                <div class="mok__wrap">
+                  <img @click="openModal" :src="pjlists.mokImg" alt="" />
+                </div>
               </div>
             </div>
             <p class="using">{{ pjlists.using }}</p>
@@ -84,9 +171,13 @@
 </template>
 
 <script>
+  import MyModal from './MyModal.vue';
   export default {
+    components: {MyModal},
     data() {
       return {
+        modal: false,
+        message: '',
         hoverImg__ignore: [{img: require('../assets/home.png')}, {img: require('../assets/github.png')}],
         project: [
           {pjname: 'renewal project', comment: 'html 부터 backend 부분까지 작업한 프로젝트'},
@@ -197,6 +288,16 @@
         ],
       };
     },
+    methods: {
+      openModal() {
+        this.modal = true;
+        document.body.style = 'overflow: hidden';
+      },
+      closeModal() {
+        this.modal = false;
+        document.body.style = 'overflow: unset';
+      },
+    },
   };
 </script>
 
@@ -204,6 +305,7 @@
   .section4 {
     width: 100%;
     height: auto;
+
     padding: 70px 20px 29px 20px;
     box-sizing: border-box;
   }
@@ -283,8 +385,6 @@
     margin-top: 20px;
   }
   .fadeup {
-    /* visibility: hidden; */
-    /* display: flex;*/
     display: none;
   }
   @keyframes fadeInUp {
@@ -307,6 +407,16 @@
     width: 32px;
   }
   .fadeup > .img > a > img {
+    /* display: block; */
+    width: 100%;
+    height: auto;
+  }
+  .fadeup > .img > .mok__wrap {
+    display: block;
+    width: 32px;
+    cursor: pointer;
+  }
+  .fadeup > .img > .mok__wrap > img {
     /* display: block; */
     width: 100%;
     height: auto;
