@@ -1,4 +1,5 @@
 <template>
+  <!-- Button trigger modal -->
   <section class="section4" id="Project">
     <div class="projectTitle">
       <h4>PROJECT</h4>
@@ -135,7 +136,7 @@
             homeImg: require('../assets/home.png'),
             gitImg: require('../assets/github.png'),
             site: 'http://bjh0126.dothome.co.kr/calculatorJS/index.html',
-            git: 'https://github.com/JongHoonC/dosiraktong.git',
+            git: 'https://github.com/JongHoonC/calculatorJS.git',
           },
           {
             img: require('../assets/guguThum.png'),
@@ -144,7 +145,7 @@
             homeImg: require('../assets/home.png'),
             gitImg: require('../assets/github.png'),
             site: 'http://bjh0126.dothome.co.kr/gugudanGame/gugudan.html',
-            git: 'https://github.com/JongHoonC/dosiraktong.git',
+            git: 'https://github.com/JongHoonC/gugudanGame.git',
           },
           {
             img: require('../assets/findnumThum.png'),
@@ -153,7 +154,7 @@
             homeImg: require('../assets/home.png'),
             gitImg: require('../assets/github.png'),
             site: 'http://bjh0126.dothome.co.kr/updowngame/index.html',
-            git: 'https://github.com/JongHoonC/dosiraktong.git',
+            git: 'https://github.com/JongHoonC/updowngame.git',
           },
           {
             img: require('../assets/todolist.png'),
@@ -161,8 +162,8 @@
             using: 'vue',
             homeImg: require('../assets/home.png'),
             gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/dosiraktong/index.html',
-            git: 'https://github.com/JongHoonC/dosiraktong.git',
+            site: 'https://jonghoonc.github.io/',
+            git: 'https://github.com/JongHoonC/TodoList.git',
           },
         ],
         webClone: [
