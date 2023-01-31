@@ -1,99 +1,23 @@
 <template>
   <!-- <div class="example-modal-window"> -->
-  <MyModal @close="closeModal" v-if="modal">
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-    <p class="show">Vue.js Modal Window!</p>
-  </MyModal>
   <!-- </div> -->
+  <MyModal @close="closeModal(index)" v-for="(pjlists, index) in pjlist" v-show="modal == index">
+    <div class="firstImg">
+      <img :src="pjlists.firstImg" alt="" />
+      <img :src="pjlists.secondImg" alt="" />
+      <img :src="pjlists.thirdImg" alt="" />
+      <img :src="pjlists.fourthImg" alt="" />
+      <img :src="pjlists.fifthImg" alt="" />
+      <img :src="pjlists.sixthImg" alt="" />
+    </div>
+  </MyModal>
   <section class="section4" id="Project">
     <div class="projectTitle">
       <h4>PROJECT</h4>
       <h3>{{ project[0].pjname }}</h3>
       <p>{{ project[0].comment }}</p>
       <div class="projectContent">
-        <div v-for="pjlists in pjlist" class="box">
+        <div v-for="(pjlists, index) in pjlist" class="box">
           <div class="img__wrap">
             <img :src="pjlists.img" alt="" />
           </div>
@@ -108,7 +32,7 @@
                   <img :src="pjlists.gitImg" alt="" />
                 </a>
                 <div class="mok__wrap">
-                  <img @click="openModal" :src="pjlists.mokImg" alt="" />
+                  <img @click="openModal(index)" :src="pjlists.mokImg" alt="" />
                 </div>
               </div>
             </div>
@@ -171,132 +95,143 @@
 </template>
 
 <script>
+  import {ref} from 'vue';
   import MyModal from './MyModal.vue';
   export default {
     components: {MyModal},
-    data() {
-      return {
-        modal: false,
-        message: '',
-        hoverImg__ignore: [{img: require('../assets/home.png')}, {img: require('../assets/github.png')}],
-        project: [
-          {pjname: 'renewal project', comment: 'html 부터 backend 부분까지 작업한 프로젝트'},
-          {pjname: 'toy project', comment: '남는 시간을 이용해 JS와 Vue를 활용하여 만든 토이 프로젝트 '},
-          {pjname: 'web clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
-        ],
-        pjlist: [
-          {
-            img: require('../assets/seomoonThum.png'),
-            pjtitle: '서문시장 야시장',
-            using: 'HTML, CSS, JS, nodeJS, MySQL',
-            complete: 'false',
-            site: 'http://seomoonjh-env.eba-vifj7trn.ap-northeast-1.elasticbeanstalk.com/',
-            git: 'https://github.com/JongHoonC/seomoon.git',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            mokImg: require('../assets/mockup.png'),
-          },
-          {
-            img: require('../assets/hyosungThum.png'),
-            pjtitle: '효성 중공업',
-            using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
-            complete: 'false',
-            site: 'http://jonghoon-env.eba-5pmv5k3e.ap-northeast-1.elasticbeanstalk.com/',
-            git: 'https://github.com/JongHoonC/NODE-Hyosung.git',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            mokImg: require('../assets/mockup.png'),
-          },
-          {
-            img: require('../assets/takjuThum.png'),
-            pjtitle: '서울 탁주',
-            using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
-            complete: 'false',
-            site: 'http://jonghoontakju-env.eba-2hzeja3e.ap-northeast-1.elasticbeanstalk.com/',
-            git: 'https://github.com/JongHoonC/SeoulTakju.git',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            mokImg: require('../assets/mockup.png'),
-          },
-        ],
-        toyProject: [
-          {
-            img: require('../assets/calcThum.png'),
-            pjtitle: '계산기',
-            using: 'HTML, CSS, JS',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/calculatorJS/index.html',
-            git: 'https://github.com/JongHoonC/calculatorJS.git',
-          },
-          {
-            img: require('../assets/guguThum.png'),
-            pjtitle: '구구단 게임',
-            using: 'HTML, CSS, JS, Vue',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/gugudanGame/gugudan.html',
-            git: 'https://github.com/JongHoonC/gugudanGame.git',
-          },
-          {
-            img: require('../assets/findnumThum.png'),
-            pjtitle: 'UP! DOWN!',
-            using: 'HTML, CSS, JS, Vue',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/updowngame/index.html',
-            git: 'https://github.com/JongHoonC/updowngame.git',
-          },
-          {
-            img: require('../assets/todolist.png'),
-            pjtitle: '일정표 만들기',
-            using: 'vue',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'https://jonghoonc.github.io/',
-            git: 'https://github.com/JongHoonC/TodoList.git',
-          },
-        ],
-        webClone: [
-          {
-            img: require('../assets/dosiraktongThum.png'),
-            pjtitle: '도시락통',
-            using: 'HTML, CSS, JS',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/dosiraktong/index.html',
-            git: 'https://github.com/JongHoonC/dosiraktong.git',
-          },
-          {
-            img: require('../assets/gardenThum.png'),
-            pjtitle: '싱그러운 집',
-            using: 'HTML, CSS, JS',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/shouse.garden/index.html',
-            git: 'https://github.com/JongHoonC/shouse.garden.git',
-          },
-          {
-            img: require('../assets/richmondThum.png'),
-            pjtitle: '더 리치먼드 평창',
-            using: 'HTML, CSS, JS',
-            homeImg: require('../assets/home.png'),
-            gitImg: require('../assets/github.png'),
-            site: 'http://bjh0126.dothome.co.kr/therichmond/index.html',
-            git: 'https://github.com/JongHoonC/therichmond.git',
-          },
-        ],
-      };
-    },
-    methods: {
-      openModal() {
-        this.modal = true;
+    setup() {
+      let modal = ref();
+      let hoverImg__ignore = [{img: require('../assets/home.png')}, {img: require('../assets/github.png')}];
+      let project = [
+        {pjname: 'renewal project', comment: 'html 부터 backend 부분까지 작업한 프로젝트'},
+        {pjname: 'toy project', comment: '남는 시간을 이용해 JS와 Vue를 활용하여 만든 토이 프로젝트 '},
+        {pjname: 'web clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
+      ];
+      let pjlist = [
+        {
+          img: require('../assets/seomoonThum.png'),
+          pjtitle: '서문시장 야시장',
+          using: 'HTML, CSS, JS, nodeJS, MySQL',
+          complete: 'false',
+          site: 'http://seomoonjh-env.eba-vifj7trn.ap-northeast-1.elasticbeanstalk.com/',
+          git: 'https://github.com/JongHoonC/seomoon.git',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          mokImg: require('../assets/mockup.png'),
+          firstImg: require('../assets/seomoon/서문시장.png'),
+          secondImg: require('../assets/seomoon/seomoon2.gif'),
+        },
+        {
+          img: require('../assets/hyosungThum.png'),
+          pjtitle: '효성 중공업',
+          using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
+          complete: 'false',
+          site: 'http://jonghoon-env.eba-5pmv5k3e.ap-northeast-1.elasticbeanstalk.com/',
+          git: 'https://github.com/JongHoonC/NODE-Hyosung.git',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          mokImg: require('../assets/mockup.png'),
+          firstImg: require('../assets/hyosung/효성중공업1.png'),
+          secondImg: require('../assets/hyosung/hyosung2.gif'),
+          thirdImg: require('../assets/hyosung/hyosung3.gif'),
+          fourthImg: require('../assets/hyosung/효성중공업2.png'),
+          fifthImg: require('../assets/hyosung/hyosung4.gif'),
+          sixthImg: require('../assets/hyosung/효성중공업3.png'),
+        },
+        {
+          img: require('../assets/takjuThum.png'),
+          pjtitle: '서울 탁주',
+          using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
+          complete: 'false',
+          site: 'http://jonghoontakju-env.eba-2hzeja3e.ap-northeast-1.elasticbeanstalk.com/',
+          git: 'https://github.com/JongHoonC/SeoulTakju.git',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          mokImg: require('../assets/mockup.png'),
+          firstImg: require('../assets/takju/takju1.png'),
+          secondImg: require('../assets/takju/takju1.gif'),
+          thirdImg: require('../assets/takju/takju2.png'),
+          fourthImg: require('../assets/takju/takju2.gif'),
+          fifthImg: require('../assets/takju/takju3.png'),
+        },
+      ];
+      let toyProject = [
+        {
+          img: require('../assets/calcThum.png'),
+          pjtitle: '계산기',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'http://bjh0126.dothome.co.kr/calculatorJS/index.html',
+          git: 'https://github.com/JongHoonC/calculatorJS.git',
+        },
+        {
+          img: require('../assets/guguThum.png'),
+          pjtitle: '구구단 게임',
+          using: 'HTML, CSS, JS, Vue',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'http://bjh0126.dothome.co.kr/gugudanGame/gugudan.html',
+          git: 'https://github.com/JongHoonC/gugudanGame.git',
+        },
+        {
+          img: require('../assets/findnumThum.png'),
+          pjtitle: 'UP! DOWN!',
+          using: 'HTML, CSS, JS, Vue',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'http://bjh0126.dothome.co.kr/updowngame/index.html',
+          git: 'https://github.com/JongHoonC/updowngame.git',
+        },
+        {
+          img: require('../assets/todolist.png'),
+          pjtitle: '일정표 만들기',
+          using: 'vue',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'https://jonghoonc.github.io/',
+          git: 'https://github.com/JongHoonC/TodoList.git',
+        },
+      ];
+      let webClone = [
+        {
+          img: require('../assets/dosiraktongThum.png'),
+          pjtitle: '도시락통',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'http://bjh0126.dothome.co.kr/dosiraktong/index.html',
+          git: 'https://github.com/JongHoonC/dosiraktong.git',
+        },
+        {
+          img: require('../assets/gardenThum.png'),
+          pjtitle: '싱그러운 집',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'http://bjh0126.dothome.co.kr/shouse.garden/index.html',
+          git: 'https://github.com/JongHoonC/shouse.garden.git',
+        },
+        {
+          img: require('../assets/richmondThum.png'),
+          pjtitle: '더 리치먼드 평창',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'http://bjh0126.dothome.co.kr/therichmond/index.html',
+          git: 'https://github.com/JongHoonC/therichmond.git',
+        },
+      ];
+      function openModal(index) {
+        modal.value = index;
         document.body.style = 'overflow: hidden';
-      },
-      closeModal() {
-        this.modal = false;
+      }
+      function closeModal() {
+        modal.value = 'index';
         document.body.style = 'overflow: unset';
-      },
+      }
+
+      return {modal, hoverImg__ignore, project, pjlist, toyProject, webClone, openModal, closeModal};
     },
   };
 </script>
@@ -432,6 +367,14 @@
     width: 100%;
     height: auto;
   }
+  .firstImg {
+    width: 800px;
+  }
+  .firstImg > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   @media (max-width: 1500px) {
     .projectTitle {
@@ -483,6 +426,9 @@
     }
     .img {
       justify-content: space-evenly;
+    }
+    .fadeup > .img > .mok__wrap {
+      display: none;
     }
   }
 </style>

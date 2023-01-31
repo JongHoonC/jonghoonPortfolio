@@ -27,13 +27,11 @@
   }
   .modal-window {
     background: #fff;
-    width: 1000px;
-    margin: 0 auto;
+    width: 808px;
+    height: 95vh;
     border-radius: 4px;
+    box-sizing: border-box;
     overflow-y: scroll;
-  }
-  .modal-content {
-    padding: 10px 20px;
   }
 
   .modal-enter-active,

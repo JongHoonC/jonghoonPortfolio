@@ -26,7 +26,7 @@
         </div>
         <div class="clickBox">
           <a v-bind:href="img" download><h2>자기소개서</h2></a>
-          <a :href="`${publicPath}jonghoonResume.pdf`" download><h2>이력서</h2></a>
+          <a :href="`${publicPath}이력서-백종훈.pdf`" download><h2>이력서</h2></a>
         </div>
       </div>
     </div>
