@@ -274,7 +274,7 @@
     box-sizing: border-box;
     transition: all 0.3s;
   }
-  .projectTitle > .projectContent > .box[data-v-fb7e4d18].calc {
+  .projectTitle > .projectContent > .box.calc {
     width: calc(25% - 20px);
   }
 
