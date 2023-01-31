@@ -15,7 +15,7 @@
     <div id="animate" class="box1 blue">
       <div class="section1__img"></div>
     </div>
-    <div class="hello" data-aos="fade-up" data-aos-offset="700" data-aos-duration="200">
+    <div class="hello" data-aos="fade-up" data-aos-offset="300" data-aos-duration="200">
       <h1>"반갑습니다"</h1>
     </div>
   </section>

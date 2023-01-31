@@ -37,7 +37,7 @@
             comment: 'REST API를 이해하고,<br/> get, post, put, delete에 대해 설명 할 수 있습니다.<br/>npm을 사용할 수 있으며, html로 짜여진 코드를 ejs<br/>구조로 변환시킬 수 있습니다. express와 route를<br/> 사용해 서버를 구성할 수 있습니다.',
           },
           {lang: 'MySQL', comment: 'SQL 구문 중 DML, DDL, DCL, TCL에 <br/> 각각 어떤 명령어가 있고 그 명령어가 어떠한 역할을 하는지<br/> 이해하고 사용할 수 있습니다.'},
-          {lang: 'VUE', comment: '배우는중 ㅋㅋ'},
+          {lang: 'VUE', comment: 'vue cli를 활용해 본 포트폴리오를 제작했습니다.<br/> 또 JS로 작성된 구문을 vue양식에 맞게 작성할 수 있습니다.'},
         ],
       };
     },
