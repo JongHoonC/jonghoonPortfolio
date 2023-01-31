@@ -275,7 +275,7 @@
     transition: all 0.3s;
   }
   .projectTitle > .projectContent > .box.calc {
-    width: calc(25% - 20px);
+    width: calc(25% - 20px) !important;
   }
 
   /* /////////////////박스 호버/////////////////// */
