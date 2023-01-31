@@ -1,0 +1,67 @@
+/* ===================폰트=================== */
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+/* ===================공통 부분=================== */
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #eaebe4;
+  font-family: 'GmarketSans';
+}
+* {
+  color: #6d5e70;
+}
+
+h1 {
+  font-size: 3.125rem;
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+h3 {
+  font-size: 1.875rem;
+  letter-spacing: 5px;
+}
+
+h4 {
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+}
+
+p {
+  font-size: 0.938rem;
+  letter-spacing: 1px;
+}
+
+section {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 13px;
+  }
+  section {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    width: 100%;
+    height: auto;
+  }
+  html {
+    font-size: 12px;
+  }
+}
