@@ -274,8 +274,8 @@
     box-sizing: border-box;
     transition: all 0.3s;
   }
-  .projectTitle > .projectContent > .box.calc[data-v-4722f99c] {
-    width: calc(25% - 20px) !important;
+  .projectTitle > .projectContent > .calc {
+    width: calc(25% - 20px);
   }
 
   /* /////////////////박스 호버/////////////////// */
