@@ -64,7 +64,7 @@
     color: #6d5e70;
     transition: all 0.2s;
   }
-  #gnb > h2.active > a[data-v-a63be1e8] {
+  #gnb > h2.active > a {
     font-size: 26px;
     color: #365bab;
   }
@@ -131,7 +131,7 @@
     #gnb {
       padding: 20px 50px;
     }
-    #gnb > h2.active > a[data-v-a63be1e8] {
+    #gnb > h2.active > a {
       font-size: 22px;
     }
     .section1__img {
@@ -152,7 +152,7 @@
     #gnb > h2 {
       margin-left: 0px;
     }
-    #gnb > h2.active > a[data-v-a63be1e8] {
+    #gnb > h2.active > a {
       font-size: 20px;
     }
     .section1 {
