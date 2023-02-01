@@ -25,7 +25,7 @@
           <h2>{{ phone }}</h2>
         </div>
         <div class="clickBox">
-          <a v-bind:href="img" download><h2>자기소개서</h2></a>
+          <a :href="`${publicPath}시도하는 개발자 백종훈 자기소개서.pdf`" download><h2>자기소개서</h2></a>
           <a :href="`${publicPath}이력서-백종훈.pdf`" download><h2>이력서</h2></a>
         </div>
       </div>
