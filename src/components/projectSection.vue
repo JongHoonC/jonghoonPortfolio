@@ -274,7 +274,7 @@
     box-sizing: border-box;
     transition: all 0.3s;
   }
-  .projectTitle > .projectContent > .calc {
+  .projectTitle > .projectContent > .box.calc {
     width: calc(25% - 20px);
   }
 
