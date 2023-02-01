@@ -400,7 +400,7 @@
       margin: 0 auto;
       margin-bottom: 30px;
     }
-    .projectTitle > .projectContent > .box[data-v-4722f99c].calc {
+    .projectTitle > .projectContent > .box.calc {
       width: 100%;
     }
     .img__wrap {
