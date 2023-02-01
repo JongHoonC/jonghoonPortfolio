@@ -46,7 +46,6 @@
 
 <style scoped>
   /* ===========프로그래스 바============== */
-
   .line {
     width: 180px;
     height: 8px;

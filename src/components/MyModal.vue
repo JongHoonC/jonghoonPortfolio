@@ -18,20 +18,20 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 9999;
     top: 0;
     left: 0;
+    z-index: 9999;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
   }
   .modal-window {
-    background: #fff;
+    overflow-y: scroll;
     width: 808px;
     height: 95vh;
     border-radius: 4px;
+    background: #fff;
     box-sizing: border-box;
-    overflow-y: scroll;
   }
 
   .modal-enter-active,
