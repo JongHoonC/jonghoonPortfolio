@@ -112,19 +112,19 @@
           img: require('../assets/seomoonThum.png'),
           pjtitle: '서문시장 야시장',
           using: 'HTML, CSS, JS, nodeJS, MySQL',
-          site: 'http://seomoonjh-env.eba-vifj7trn.ap-northeast-1.elasticbeanstalk.com/',
+          site: 'https://seomoon-jonghoon.herokuapp.com/',
           git: 'https://github.com/JongHoonC/seomoon.git',
           homeImg: require('../assets/home.png'),
           gitImg: require('../assets/github.png'),
           mokImg: require('../assets/mockup.png'),
           firstImg: require('../assets/seomoon/서문시장.png'),
-          secondImg: require('../assets/seomoon/seomoon2.gif'),
+          secondImg: require('../assets/seomoon/email1.gif'),
         },
         {
           img: require('../assets/hyosungThum.png'),
           pjtitle: '효성 중공업',
           using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
-          site: 'http://jonghoon-env.eba-5pmv5k3e.ap-northeast-1.elasticbeanstalk.com/',
+          site: 'https://hyosung-jonghoon.herokuapp.com/',
           git: 'https://github.com/JongHoonC/NODE-Hyosung.git',
           homeImg: require('../assets/home.png'),
           gitImg: require('../assets/github.png'),
@@ -140,7 +140,7 @@
           img: require('../assets/takjuThum.png'),
           pjtitle: '서울 탁주',
           using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
-          site: 'http://jonghoontakju-env.eba-2hzeja3e.ap-northeast-1.elasticbeanstalk.com/',
+          site: 'https://takju-jonghoon.herokuapp.com/',
           git: 'https://github.com/JongHoonC/SeoulTakju.git',
           homeImg: require('../assets/home.png'),
           gitImg: require('../assets/github.png'),
@@ -375,7 +375,7 @@
     height: auto;
   }
   .firstImg {
-    width: 800px;
+    width: 1100px;
   }
   .firstImg > img {
     display: block;
