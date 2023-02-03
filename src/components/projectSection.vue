@@ -112,7 +112,6 @@
           img: require('../assets/seomoonThum.png'),
           pjtitle: '서문시장 야시장',
           using: 'HTML, CSS, JS, nodeJS, MySQL',
-          complete: 'false',
           site: 'http://seomoonjh-env.eba-vifj7trn.ap-northeast-1.elasticbeanstalk.com/',
           git: 'https://github.com/JongHoonC/seomoon.git',
           homeImg: require('../assets/home.png'),
@@ -125,7 +124,6 @@
           img: require('../assets/hyosungThum.png'),
           pjtitle: '효성 중공업',
           using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
-          complete: 'false',
           site: 'http://jonghoon-env.eba-5pmv5k3e.ap-northeast-1.elasticbeanstalk.com/',
           git: 'https://github.com/JongHoonC/NODE-Hyosung.git',
           homeImg: require('../assets/home.png'),
@@ -142,7 +140,6 @@
           img: require('../assets/takjuThum.png'),
           pjtitle: '서울 탁주',
           using: 'HTML, CSS, JS, jQuery, NodeJS, MySQL',
-          complete: 'false',
           site: 'http://jonghoontakju-env.eba-2hzeja3e.ap-northeast-1.elasticbeanstalk.com/',
           git: 'https://github.com/JongHoonC/SeoulTakju.git',
           homeImg: require('../assets/home.png'),
@@ -154,6 +151,16 @@
           fourthImg: require('../assets/takju/takju2.gif'),
           fifthImg: require('../assets/takju/takju3.png'),
         },
+        // {
+        //   img: require('../assets/한일thum.png'),
+        //   pjtitle: '한일 병원',
+        //   using: 'HTML, CSS, JS',
+        //   site: 'http://bjh0126.dothome.co.kr/hanilhospital/index.html',
+        //   git: 'https://github.com/JongHoonC/hanilhospital.git',
+        //   homeImg: require('../assets/home.png'),
+        //   gitImg: require('../assets/github.png'),
+        //   mokImg: require('../assets/mockup.png'),
+        // },
       ];
       let toyProject = [
         {
