@@ -17,7 +17,7 @@
       <h3>{{ project[0].pjname }}</h3>
       <p>{{ project[0].comment }}</p>
       <div class="projectContent">
-        <div v-for="(pjlists, index) in pjlist" class="box">
+        <div v-for="(pjlists, index) in pjlist" class="box calc">
           <div class="img__wrap">
             <img :src="pjlists.img" alt="" />
           </div>
@@ -151,16 +151,16 @@
           fourthImg: require('../assets/takju/takju2.gif'),
           fifthImg: require('../assets/takju/takju3.png'),
         },
-        // {
-        //   img: require('../assets/한일thum.png'),
-        //   pjtitle: '한일 병원',
-        //   using: 'HTML, CSS, JS',
-        //   site: 'http://bjh0126.dothome.co.kr/hanilhospital/index.html',
-        //   git: 'https://github.com/JongHoonC/hanilhospital.git',
-        //   homeImg: require('../assets/home.png'),
-        //   gitImg: require('../assets/github.png'),
-        //   mokImg: require('../assets/mockup.png'),
-        // },
+        {
+          img: require('../assets/한일thum.png'),
+          pjtitle: '한일 병원',
+          using: 'HTML, CSS, JS',
+          site: 'http://bjh0126.dothome.co.kr/hanilhospital/index.html',
+          git: 'https://github.com/JongHoonC/hanilhospital.git',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          mokImg: require('../assets/mockup.png'),
+        },
       ];
       let toyProject = [
         {
