@@ -27,7 +27,7 @@
   }
   .modal-window {
     overflow-y: scroll;
-    width: 1108px;
+    width: 1008px;
     height: 95vh;
     border-radius: 4px;
     background: #fff;

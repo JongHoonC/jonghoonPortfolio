@@ -375,7 +375,7 @@
     height: auto;
   }
   .firstImg {
-    width: 1100px;
+    width: 1000px;
   }
   .firstImg > img {
     display: block;
