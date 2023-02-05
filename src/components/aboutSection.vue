@@ -195,7 +195,7 @@
     }
 
     .intro__introduce {
-      top: 0px;
+      top: 10px;
       width: 87vw;
       padding: 0;
     }
