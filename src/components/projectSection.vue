@@ -103,7 +103,7 @@
       let modal = ref();
       let hoverImg__ignore = [{img: require('../assets/home.png')}, {img: require('../assets/github.png')}];
       let project = [
-        {pjname: 'renewal project', comment: 'html 부터 backend 부분까지 작업한 프로젝트'},
+        {pjname: 'renewal project', comment: '기존 사이트를 리뉴얼한 리뉴얼 프로젝트'},
         {pjname: 'toy project', comment: '남는 시간을 이용해 JS와 Vue를 활용하여 만든 토이 프로젝트 '},
         {pjname: 'web clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
       ];

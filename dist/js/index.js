@@ -68,6 +68,7 @@ $(function () {
   $(window).on('scroll', function () {
     var pos = $(window).scrollTop();
     var pos2 = pos + 50;
+    console.log(pos);
     var scrollBottom = pos + $(window).height();
     // console.log(pos);
     // Link Highlighting
