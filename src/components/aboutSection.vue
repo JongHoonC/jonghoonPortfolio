@@ -155,7 +155,7 @@
     }
   }
   @media (max-width: 1440px) {
-    .intro__imagebox[data-v-5b678ea8] {
+    .intro__imagebox {
       width: 278px;
       height: 362px;
     }
@@ -182,7 +182,7 @@
     .img__wrap > h4 {
       margin: 0;
     }
-    .intro__imagebox[data-v-5b678ea8] {
+    .intro__imagebox {
       width: 249px;
       height: 315px;
       margin: 0 auto;
@@ -206,7 +206,7 @@
   }
 
   @media (max-width: 768px) {
-    .intro__imagebox[data-v-5b678ea8] {
+    .intro__imagebox {
       width: 219px;
       height: 278px;
     }
