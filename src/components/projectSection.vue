@@ -10,6 +10,13 @@
       <img :src="pjlists.fifthImg" alt="" />
       <img :src="pjlists.sixthImg" alt="" />
     </div>
+    <div class="goHomePage__wrap">
+      <div class="goHomePage">
+        <a :href="pjlists.site" target="_blank">
+          <h2>홈페이지 바로가기</h2>
+        </a>
+      </div>
+    </div>
   </MyModal>
   <section class="section4" id="Project">
     <div class="projectTitle">
@@ -63,7 +70,7 @@
       <h3>{{ project[0].pjname }}</h3>
       <p>{{ project[0].comment }}</p>
       <div class="projectContent">
-        <div v-for="(pjlists, index) in pjlist" class="box">
+        <div v-for="(pjlists, index) in pjlist" class="box calc">
           <div class="img__wrap">
             <img :src="pjlists.img" alt="" />
           </div>
@@ -432,7 +439,31 @@
     width: 100%;
     height: auto;
   }
-
+  .goHomePage__wrap {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background-color: #eaebe4;
+  }
+  .goHomePage {
+    overflow: hidden;
+    width: 300px;
+    height: 70px;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-color: #365bab;
+    box-sizing: border-box;
+  }
+  .goHomePage > a {
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 70px;
+    text-align: center;
+  }
+  .goHomePage > a > h2 {
+    color: #fefefe;
+  }
   @media (max-width: 1500px) {
     .projectTitle {
       width: 100%;
