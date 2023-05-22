@@ -14,6 +14,52 @@
   <section class="section4" id="Project">
     <div class="projectTitle">
       <h4>PROJECT</h4>
+      <div class="projectTitle">
+        <h3>{{ project[1].pjname }}</h3>
+        <p>{{ project[1].comment }}</p>
+        <div class="projectContent">
+          <div v-for="toyProjects in toyProject" class="box calc">
+            <div class="img__wrap">
+              <img :src="toyProjects.img" alt="" />
+            </div>
+            <div class="text__wrap">
+              <h2>{{ toyProjects.pjtitle }}</h2>
+              <div class="fadeup">
+                <div class="img">
+                  <a v-bind:href="toyProjects.site" target="_blank">
+                    <img :src="toyProjects.homeImg" alt="" />
+                  </a>
+                  <a v-bind:href="toyProjects.git" target="_blank">
+                    <img :src="toyProjects.gitImg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <p class="using">{{ toyProjects.using }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="projectContent">
+          <div v-for="toyProjects in toyProject1" class="box calc">
+            <div class="img__wrap">
+              <img :src="toyProjects.img" alt="" />
+            </div>
+            <div class="text__wrap">
+              <h2>{{ toyProjects.pjtitle }}</h2>
+              <div class="fadeup">
+                <div class="img">
+                  <a v-bind:href="toyProjects.site" target="_blank">
+                    <img :src="toyProjects.homeImg" alt="" />
+                  </a>
+                  <a v-bind:href="toyProjects.git" target="_blank">
+                    <img :src="toyProjects.gitImg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <p class="using">{{ toyProjects.using }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <h3>{{ project[0].pjname }}</h3>
       <p>{{ project[0].comment }}</p>
       <div class="projectContent">
@@ -41,31 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="projectTitle">
-      <h3>{{ project[1].pjname }}</h3>
-      <p>{{ project[1].comment }}</p>
-      <div class="projectContent">
-        <div v-for="toyProjects in toyProject" class="box calc">
-          <div class="img__wrap">
-            <img :src="toyProjects.img" alt="" />
-          </div>
-          <div class="text__wrap">
-            <h2>{{ toyProjects.pjtitle }}</h2>
-            <div class="fadeup">
-              <div class="img">
-                <a v-bind:href="toyProjects.site" target="_blank">
-                  <img :src="toyProjects.homeImg" alt="" />
-                </a>
-                <a v-bind:href="toyProjects.git" target="_blank">
-                  <img :src="toyProjects.gitImg" alt="" />
-                </a>
-              </div>
-            </div>
-            <p class="using">{{ toyProjects.using }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="projectTitle">
       <h3>{{ project[2].pjname }}</h3>
       <p>{{ project[2].comment }}</p>
@@ -104,7 +126,7 @@
       let hoverImg__ignore = [{img: require('../assets/home.png')}, {img: require('../assets/github.png')}];
       let project = [
         {pjname: 'renewal project', comment: '기존 사이트를 리뉴얼한 리뉴얼 프로젝트'},
-        {pjname: 'toy project', comment: '남는 시간을 이용해 JS와 Vue를 활용하여 만든 토이 프로젝트 '},
+        {pjname: 'java script project', comment: '자바스크립트 실력을 늘리기 위한 토이 프로젝트'},
         {pjname: 'web clone', comment: 'HTML, CSS의 기초를 다지기 위해 연습했던 웹 클로닝 사이트'},
       ];
       let pjlist = [
@@ -151,26 +173,16 @@
           fourthImg: require('../assets/takju/takju2.gif'),
           fifthImg: require('../assets/takju/takju3.png'),
         },
-        // {
-        //   img: require('../assets/한일thum.png'),
-        //   pjtitle: '한일 병원',
-        //   using: 'HTML, CSS, JS',
-        //   site: 'http://bjh0126.dothome.co.kr/hanilhospital/index.html',
-        //   git: 'https://github.com/JongHoonC/hanilhospital.git',
-        //   homeImg: require('../assets/home.png'),
-        //   gitImg: require('../assets/github.png'),
-        //   mokImg: require('../assets/mockup.png'),
-        // },
       ];
       let toyProject = [
         {
-          img: require('../assets/calcThum.png'),
-          pjtitle: '계산기',
+          img: require('../assets/rocksissorpaper.png'),
+          pjtitle: '가위 바뷔 보 게임',
           using: 'HTML, CSS, JS',
           homeImg: require('../assets/home.png'),
           gitImg: require('../assets/github.png'),
-          site: 'http://bjh0126.dothome.co.kr/calculatorJS/index.html',
-          git: 'https://github.com/JongHoonC/calculatorJS.git',
+          site: 'https://jonghoonc.github.io/RockSissorPaper/',
+          git: 'https://github.com/JongHoonC/RockSissorPaper.git',
         },
         {
           img: require('../assets/guguThum.png'),
@@ -192,12 +204,50 @@
         },
         {
           img: require('../assets/todolist.png'),
-          pjtitle: '일정표 만들기',
-          using: 'vue',
+          pjtitle: 'To Do List',
+          using: 'HTML, CSS, JS',
           homeImg: require('../assets/home.png'),
           gitImg: require('../assets/github.png'),
-          site: 'https://jonghoonc.github.io/',
-          git: 'https://github.com/JongHoonC/TodoList.git',
+          site: 'https://jonghoonc.github.io/TodoListJS/',
+          git: 'https://github.com/JongHoonC/TodoListJS.git',
+        },
+      ];
+      let toyProject1 = [
+        {
+          img: require('../assets/ballcontrol.png'),
+          pjtitle: '공 움직이기',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'https://jonghoonc.github.io/ballControl/',
+          git: 'https://github.com/JongHoonC/ballControl.git',
+        },
+        {
+          img: require('../assets/appleTree.png'),
+          pjtitle: '사과 나무 게임',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'https://jonghoonc.github.io/appleTree/',
+          git: 'https://github.com/JongHoonC/appleTree.git',
+        },
+        {
+          img: require('../assets/kiosk.png'),
+          pjtitle: '키오스크',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'https://jonghoonc.github.io/kiosk/',
+          git: 'https://github.com/JongHoonC/kiosk.git',
+        },
+        {
+          img: require('../assets/avoid.png'),
+          pjtitle: '장애물 피하기',
+          using: 'HTML, CSS, JS',
+          homeImg: require('../assets/home.png'),
+          gitImg: require('../assets/github.png'),
+          site: 'https://jonghoonc.github.io/avoidObject/',
+          git: 'https://github.com/JongHoonC/avoidObject.git',
         },
       ];
       let webClone = [
@@ -238,7 +288,7 @@
         document.body.style = 'overflow: unset';
       }
 
-      return {modal, hoverImg__ignore, project, pjlist, toyProject, webClone, openModal, closeModal};
+      return {modal, hoverImg__ignore, project, pjlist, toyProject, toyProject1, webClone, openModal, closeModal};
     },
   };
 </script>
